@@ -37,14 +37,14 @@ int getMaxCycleLengthInRange(int i, int j)
 
 int main(int argc, char **argv) 
 {
-  int i;
-  int j;
+  int firstValue;
+  int secondValue;
 
-  while (cin >> i >> j) {
-    int iOrig = i;
-    int jOrig = j;
+  while (cin >> firstValue >> secondValue) {
+    int firstValueOrig = firstValue;
+    int seconfValueOrig = secondValue;
 
-    if ( i > j ) swap (i, j);
+    if ( firstValue > secondValue ) swap (firstValue, secondValue);
     
     int maxCycleLength = getMaxCycleLengthInRange(i, j);
     cout << iOrig << " " << jOrig << " " << maxCycleLength << endl;
