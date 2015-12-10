@@ -40,12 +40,12 @@ int main(int argc, char **argv)
 
   while (cin >> firstValue >> secondValue) {
     int firstValueOrig = firstValue;
-    int seconfValueOrig = secondValue;
+    int secondValueOrig = secondValue;
 
     if ( firstValue > secondValue ) swap (firstValue, secondValue);
     
-    int maxCycleLength = getMaxCycleLengthInRange(i, j);
-    cout << iOrig << " " << jOrig << " " << maxCycleLength << endl;
+    int maxCycleLength = getMaxCycleLengthInRange(firstValue, secondValue);
+    cout << firstValueOrig << " " << secondValueOrig << " " << maxCycleLength << endl;
   }
   return 0;
 }
