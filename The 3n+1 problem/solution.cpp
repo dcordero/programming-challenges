@@ -1,5 +1,3 @@
-// @BEGIN_OF_SOURCE_CODE
-
 #include <iostream>
 
 using namespace std;
@@ -51,6 +49,3 @@ int main(int argc, char **argv)
   }
   return 0;
 }
-
-// @END_OF_SOURCE_CODE
-
