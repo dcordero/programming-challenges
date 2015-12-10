@@ -22,31 +22,20 @@ vector<vector<int> > readBoard(int width, int height)
 int getValueOfCell(int x, int y, vector<vector<int> >board)
 {
   int result = 0;
-  if (x > 0) { 
-    result += board[x-1][y];
-  }
-  if (y > 0) {
-    result += board[x][y-1];
-  }
-  if (x > 0 && y > 0) {
-    result += board[x-1][y-1];
-  }
-  if (x < board.size()-1) {
-    result += board[x+1][y];
-  }
-  if (y < board[x].size()-1) {
-    result += board[x][y+1];
-  }
-  if (x < board.size()-1 && y < board[x].size()-1) {
-    result += board[x+1][y+1];
-  }
-  if (x > 0 && y < board[x].size()-1) {
-    result += board[x-1][y+1];
-  }
-  if (x < board.size()-1 && y > 0) {
-    result += board[x+1][y-1];
-  }
+  int width = board.size()-1;
+  int height = board[0].size()-1;
 
+  for (int row = x - 1; row <= x + 1; row++) {
+    for (int col = y -1; col <= y + 1; col++) {
+      if (row < 0 || col < 0 || row > width || col > height) {
+	continue;
+      }
+
+      if (board[row][col] == 1) {
+	result++;
+      }
+    }
+  }
   return result;
 }
 
