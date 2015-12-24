@@ -36,8 +36,15 @@ func readEntryValues() -> (Int, Int)
   let firstValue = readLine(stripNewline: true)
   let secondValue = readLine(stripNewline: true)
 
-  let firstValueInt = Int(firstValue!)!
-  let secondValueInt = Int(secondValue!)!
+  var firstValueInt = 0
+  if let value = firstValue {
+    firstValueInt = Int(value) ?? 0
+  }
+  
+  var secondValueInt = 0
+  if let value = secondValue {
+    secondValueInt = Int(value) ?? 0
+  }
 
   return (firstValueInt, secondValueInt)
 }
